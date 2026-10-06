@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import 'lenis/dist/lenis.css';
+import './styles/global.css';
+import './styles/components.css';
+import './styles/pages.css';
 import App from './App';
+import { prefersReducedMotion } from './lib/gsap';
 import reportWebVitals from './reportWebVitals';
+
+// CSS only pre-hides animated elements when this class is present, so content
+// stays visible for reduced-motion users and if scripts fail.
+if (!prefersReducedMotion()) {
+  document.documentElement.classList.add('motion');
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

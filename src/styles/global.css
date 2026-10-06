@@ -1,0 +1,407 @@
+/* Tokens, reset, typography, layout primitives and motion pre-states. */
+
+:root {
+  --ink: #0b0c0e;
+  --ink-soft: #16181c;
+  --paper: #ffffff;
+  --mist: #f3f5f7;
+  --slab: #d9dbde;
+  --sky: #559fc4;
+  --sky-deep: #3d87ad;
+  --navy: #0a2472;
+  --coral: #ee4b5a;
+  --muted: #5b636e;
+  --line: rgba(11, 12, 14, 0.12);
+
+  --font-display: 'Red Hat Display', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Red Hat Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-condensed: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+
+  --radius-sm: 10px;
+  --radius-lg: 20px;
+  --header-h: 68px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --section: clamp(72px, 10vw, 150px);
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@media (min-width: 992px) {
+  :root {
+    --header-h: 84px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html.is-locked {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 3px;
+}
+
+/* ---------- Layout ---------- */
+
+.page {
+  background: var(--paper);
+  animation: page-in 0.6s ease-out both;
+}
+
+/* Opacity only: a transform here would break pinned and fixed descendants. */
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section);
+  background: var(--paper);
+}
+
+.section--tight {
+  padding-block: calc(var(--section) * 0.6);
+}
+
+.section--flush-bottom {
+  padding-bottom: 0;
+}
+
+[data-theme='dark'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+[data-theme='sky'] {
+  background: var(--sky);
+  color: var(--paper);
+}
+
+.section__head {
+  display: grid;
+  gap: 18px;
+  max-width: 760px;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+.section__head--center {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+/* ---------- Type ---------- */
+
+.h1,
+.h2,
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.h1 {
+  font-size: clamp(2.6rem, 6.4vw, 5.6rem);
+}
+
+.h1--sm {
+  font-size: clamp(2.2rem, 4.4vw, 3.9rem);
+}
+
+.h2 {
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+}
+
+.h3 {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+}
+
+.page--condensed :is(.h1, .h2, .h3, .showcase__title, .tile__value, .reach__value) {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 1;
+}
+
+.page--condensed .h1 {
+  font-size: clamp(3rem, 7.6vw, 6.6rem);
+}
+
+.page--condensed .h2 {
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+.eyebrow--on-color {
+  color: var(--paper);
+}
+
+.lead {
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.lead--muted {
+  color: var(--muted);
+}
+
+.lead--dim {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copy {
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.copy + .copy {
+  margin-top: 1em;
+}
+
+.rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin-bottom: clamp(24px, 4vw, 48px);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.btn--navy {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--paper);
+}
+
+.btn--coral {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--paper);
+}
+
+.btn--sky {
+  background: var(--sky);
+  border-color: var(--sky);
+  color: var(--paper);
+}
+
+.btn--light {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--paper);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.btn:hover {
+  background: var(--sky);
+  border-color: var(--sky);
+  color: var(--paper);
+}
+
+.btn--sky:hover,
+[data-theme='sky'] .btn:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn__arrow {
+  display: inline-flex;
+  transition: transform 0.35s var(--ease);
+}
+
+.btn:hover .btn__arrow {
+  transform: translate(3px, -3px);
+}
+
+/* ---------- Motion pre-states ----------
+   Only applied when scripts add `.motion` to <html>; GSAP then takes over. */
+
+html.motion [data-split],
+html.motion [data-anim='fade'],
+html.motion [data-anim='stagger'],
+html.motion [data-anim='media'],
+html.motion [data-anim='scale'],
+html.motion [data-anim='rise'],
+html.motion [data-anim='line'],
+html.motion [data-anim='hero-bg'] {
+  visibility: hidden;
+}
+
+.split-word,
+.split-line {
+  will-change: transform;
+}
+
+/* Room for descenders inside the per-word masks. */
+.split-word-mask {
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+/* ---------- Intro loader ---------- */
+
+.loader {
+  --hex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 93.3 25v50L50 100 6.7 75V25z'/%3E%3C/svg%3E");
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  -webkit-mask-image: var(--hex), linear-gradient(#000, #000);
+  mask-image: var(--hex), linear-gradient(#000, #000);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 0 0, 100% 100%;
+  mask-size: 0 0, 100% 100%;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.loader__inner {
+  display: grid;
+  justify-items: center;
+  gap: 28px;
+}
+
+.loader__mark {
+  --logo-accent: var(--paper);
+  width: 72px;
+  height: 72px;
+}
+
+.loader__bar {
+  width: 120px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.loader__bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--sky);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page {
+    animation: none;
+  }
+
+  .btn,
+  .btn__arrow {
+    transition: none;
+  }
+}
