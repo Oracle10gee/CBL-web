@@ -6,10 +6,14 @@
 
 import oxygenCylinders from '../assets/images/oxygen-cylinders.jpg';
 import oxygenDelivery from '../assets/images/oxygen-delivery.jpg';
+import homeHeroFactory from '../assets/images/home-hero-factory.png';
 
 export const images = {
   // Home
-  'home.hero': { label: 'Hero — production line', tone: 'ink' },
+  'home.hero': {
+    src: homeHeroFactory,
+    alt: 'Automated production line with a curved blue conveyor in a bright factory',
+  },
   'home.who': { label: 'Who we are', tone: 'slab' },
   'home.stat.specimen': { label: 'Specimen collection', tone: 'navy' },
   'home.stat.carepacks': { label: 'COVID-19 care packs', tone: 'ink' },

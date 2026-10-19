@@ -9,28 +9,14 @@
   color: inherit;
 }
 
-.logo__mark {
-  width: 30px;
-  height: 30px;
-  flex: none;
+.logo__image {
+  display: block;
+  width: 120px;
+  height: auto;
 }
 
-.logo__word {
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.logo--lg .logo__mark {
-  width: 40px;
-  height: 40px;
-}
-
-.logo--lg .logo__word {
-  font-size: 0.95rem;
+.logo--lg .logo__image {
+  width: 150px;
 }
 
 /* ---------- Header ---------- */
@@ -189,8 +175,10 @@
 }
 
 .header--on-dark .nav__submenu {
-  background: var(--paper);
-  color: var(--ink);
+  background: rgba(11, 12, 14, 0.5);
+  color: var(--paper);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .nav__item--open .nav__submenu {

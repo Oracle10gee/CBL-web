@@ -70,7 +70,7 @@ export default function Home() {
   usePageMotion(root);
 
   return (
-    <div className="home page--condensed" ref={root}>
+    <div className="home" ref={root}>
       <section className="hero hero--full" data-theme="dark">
         <div className="hero__bg" data-anim="hero-bg">
           <Media slot="home.hero" reveal={false} className="media--flat" />

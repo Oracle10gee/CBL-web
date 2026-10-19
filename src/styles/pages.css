@@ -31,6 +31,10 @@
   margin-top: 10px;
 }
 
+.hero__actions .btn {
+  border-radius: 999px;
+}
+
 /* Full-bleed image hero (home) */
 
 .hero--full {
