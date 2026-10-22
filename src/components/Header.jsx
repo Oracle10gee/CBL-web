@@ -120,15 +120,20 @@ export default function Header() {
                   onMouseLeave={() => setDropdown(null)}
                   onKeyDown={(event) => event.key === 'Escape' && setDropdown(null)}
                 >
-                  <button
-                    className="nav__link"
-                    type="button"
-                    aria-expanded={dropdown === item.label}
-                    onClick={() => setDropdown(dropdown === item.label ? null : item.label)}
-                  >
-                    {item.label}
-                    <Icon name="chevron" size={14} className="nav__caret" />
-                  </button>
+                  <div className="nav__link-group">
+                    <NavLink className="nav__link" to={item.to}>
+                      {item.label}
+                    </NavLink>
+                    <button
+                      className="nav__toggle"
+                      type="button"
+                      aria-label={`${dropdown === item.label ? 'Close' : 'Open'} ${item.label} menu`}
+                      aria-expanded={dropdown === item.label}
+                      onClick={() => setDropdown(dropdown === item.label ? null : item.label)}
+                    >
+                      <Icon name="chevron" size={14} className="nav__caret" />
+                    </button>
+                  </div>
                   <ul className="nav__submenu">
                     {item.children.map((child, index) => (
                       <li key={child.to} style={{ '--i': index }}>

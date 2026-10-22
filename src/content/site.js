@@ -3,6 +3,7 @@
 export const nav = [
   {
     label: 'Company',
+    to: '/',
     children: [
       { label: 'About Us', to: '/about' },
       { label: 'Partnerships', to: '/partnerships' },
@@ -12,6 +13,7 @@ export const nav = [
   },
   {
     label: 'Solutions',
+    to: '/solutions',
     children: [
       { label: 'Medical Logistics', to: '/solutions#medical-logistics' },
       { label: 'Technology Solutions', to: '/solutions#technology-solutions' },

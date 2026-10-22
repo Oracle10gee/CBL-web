@@ -141,6 +141,12 @@
   position: relative;
 }
 
+.nav__link-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .nav__link {
   display: inline-flex;
   align-items: center;
@@ -151,6 +157,22 @@
   font-weight: 500;
   white-space: nowrap;
   transition: opacity 0.25s;
+}
+
+.nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 40px;
+  padding: 0;
+  opacity: 0.75;
+  transition: opacity 0.25s;
+}
+
+.nav__toggle:hover,
+.nav__item--open > .nav__link-group .nav__toggle {
+  opacity: 1;
 }
 
 .nav:hover .nav__link:not(:hover),
