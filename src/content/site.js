@@ -13,9 +13,10 @@ export const nav = [
   {
     label: 'Solutions',
     children: [
-      { label: 'Medical Logistics', to: '/solutions/medical-logistics' },
-      { label: 'Technology Solutions', to: '/solutions/technology' },
-      { label: 'Project Management', to: '/solutions/project-management' },
+      { label: 'Medical Logistics', to: '/solutions#medical-logistics' },
+      { label: 'Technology Solutions', to: '/solutions#technology-solutions' },
+      { label: 'Project Management', to: '/solutions#project-management' },
+      { label: 'Proven in Practice', to: '/solutions#proven-in-practice' },
     ],
   },
   { label: 'Case studies', to: '/case-studies' },
@@ -25,9 +26,6 @@ export const nav = [
 // Routes that appear in the navigation but have no supplied design yet.
 export const pendingPages = [
   { path: '/open-roles', title: 'Open Roles', eyebrow: 'Company' },
-  { path: '/solutions/medical-logistics', title: 'Medical Logistics', eyebrow: 'Solutions' },
-  { path: '/solutions/technology', title: 'Technology Solutions', eyebrow: 'Solutions' },
-  { path: '/solutions/project-management', title: 'Project Management', eyebrow: 'Solutions' },
   { path: '/case-studies', title: 'Case studies', eyebrow: 'Our work' },
   { path: '/privacy-policy', title: 'Privacy Policy', eyebrow: 'Legal' },
   { path: '/impact-report', title: 'Impact Report', eyebrow: 'Company' },
@@ -49,38 +47,58 @@ export const footerLinks = [
   { label: 'Newsroom', to: '/newsroom' },
 ];
 
-export const partnerLogos = [
-  'Total Medical Services',
-  'Reddington',
-  'Mother & Child Hospitals',
-  'R-Jolad Hospital',
-];
-
 export const expertise = [
   {
-    icon: 'pulse',
+    icon: 'solidPulse',
     title: 'Medical Logistics',
     text: 'Understanding the operational demands of moving essential healthcare products safely and efficiently.',
   },
   {
-    icon: 'monitor',
+    icon: 'solidMonitor',
     title: 'Technology',
     text: 'Designing and implementing digital systems that solve real operational problems.',
   },
   {
-    icon: 'board',
+    icon: 'solidBook',
     title: 'Project Management',
     text: 'Bringing structure, coordination and accountability to complex initiatives.',
   },
   {
-    icon: 'gear',
+    icon: 'solidGear',
     title: 'Operations',
     text: 'Turning plans into practical, reliable execution.',
   },
   {
-    icon: 'shield',
+    icon: 'solidArchive',
     title: 'Healthcare & Programme Delivery',
     text: 'Understanding the environments, stakeholders and requirements within which our solutions operate.',
+  },
+];
+
+export const companyValues = [
+  {
+    title: 'Precision',
+    text: 'We pay attention to the details that make complex systems work.',
+  },
+  {
+    title: 'Clarity',
+    text: 'We make complexity easier to understand, communicate and act on.',
+  },
+  {
+    title: 'Accountability',
+    text: 'We take ownership of our responsibilities and remain committed to delivering what we promise.',
+  },
+  {
+    title: 'Collaboration',
+    text: 'We believe stronger outcomes come from bringing the right people and capabilities together.',
+  },
+  {
+    title: 'Continuous Improvement',
+    text: 'We remain curious, learn from experience and look for better ways to solve problems.',
+  },
+  {
+    title: 'Impact',
+    text: 'We measure our work by what it makes possible for the people and organisations we serve.',
   },
 ];
 
@@ -104,27 +122,27 @@ export const collaborations = [
 
 export const principles = [
   {
-    icon: 'check',
+    icon: 'solidShield',
     title: 'Trust',
     text: 'We communicate openly, honour our commitments and take responsibility for our role.',
   },
   {
-    icon: 'layers',
+    icon: 'solidHeart',
     title: 'Complementary Capability',
     text: 'We recognise that the strongest solutions often come from combining different areas of expertise.',
   },
   {
-    icon: 'eye',
+    icon: 'solidBook',
     title: 'Transparency',
     text: 'We create clear expectations, responsibilities and channels of communication from the outset.',
   },
   {
-    icon: 'bulb',
+    icon: 'solidBulb',
     title: 'Long-Term Thinking',
     text: 'We build relationships with the potential to create sustained value beyond a single project.',
   },
   {
-    icon: 'users',
+    icon: 'solidUsers',
     title: 'Accountability',
     text: 'We remain focused on delivery and take ownership of the outcomes within our scope.',
   },

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import Media from '../components/Media';
+import Showcase from '../components/Showcase';
 import { Eyebrow } from '../components/sections';
 import { usePageMotion } from '../motion/usePageMotion';
 
@@ -51,22 +52,8 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section" data-theme="light">
-        <div className="container statements">
-          {statements.map((item) => (
-            <article className="split split--narrow-media" key={item.title}>
-              <Media slot={item.slot} className="split__media" />
-              <div className="split__body">
-                <h2 className="h2" data-split="words">
-                  {item.title}
-                </h2>
-                <p className="copy" data-split="lines">
-                  {item.text}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
+      <section className="section section--flush-bottom" data-theme="light">
+        <Showcase items={statements} />
       </section>
 
       <section className="banner" data-theme="dark">

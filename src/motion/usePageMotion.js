@@ -231,10 +231,10 @@ export function usePageMotion(scope, deps = []) {
         render();
         gsap.to(state, {
           value: end,
-          duration: 2,
+          duration: 0.9,
           ease: 'power2.out',
           onUpdate: render,
-          scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+          scrollTrigger: { trigger: el.closest('.tile') || el, start: 'top bottom', once: true },
         });
         cleanups.push(() => {
           el.textContent = finalText;

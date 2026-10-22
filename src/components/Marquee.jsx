@@ -1,13 +1,12 @@
-import { partnerLogos } from '../content/site';
+import { partnerLogos } from '../content/images';
 
-// Text chips stand in for partner logos until the official artwork is supplied.
-function LogoChip({ name }) {
+function PartnerLogo({ logo }) {
   return (
-    <span className="logo-chip">
-      <span className="logo-chip__glyph" aria-hidden="true">
-        {name.charAt(0)}
+    <span className="partner-logo-item">
+      <span className={`partner-logo-frame ${logo.className}`}>
+        <img className="partner-logo" src={logo.src} alt="" />
       </span>
-      {name}
+      <span className="partner-logo-name">{logo.name}</span>
     </span>
   );
 }
@@ -19,8 +18,8 @@ export default function Marquee({ className = '' }) {
       <div className="marquee__track">
         {[0, 1].map((copy) => (
           <div className="marquee__row" key={copy} aria-hidden={copy === 1}>
-            {row.map((name, index) => (
-              <LogoChip key={`${name}-${index}`} name={name} />
+            {row.map((logo, index) => (
+              <PartnerLogo key={`${logo.name}-${index}`} logo={logo} />
             ))}
           </div>
         ))}

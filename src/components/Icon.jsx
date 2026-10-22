@@ -26,6 +26,20 @@ const PATHS = {
       <path d="M12 9v6M9 12h6" />
     </>
   ),
+  solidShield: <path d="M12 2.5 3.5 5.8v6.3c0 5.1 3.6 8.2 8.5 9.7 4.9-1.5 8.5-4.6 8.5-9.7V5.8L12 2.5Z" fill="currentColor" stroke="none" />,
+  solidHeart: <path d="M20.8 8.6c0 5-8.8 11-8.8 11s-8.8-6-8.8-11A4.8 4.8 0 0 1 12 6.1a4.8 4.8 0 0 1 8.8 2.5Z" fill="currentColor" stroke="none" />,
+  solidBook: <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v18H5.5A2.5 2.5 0 0 0 3 23V5.5ZM21 5.5A2.5 2.5 0 0 0 18.5 3H13v18h5.5A2.5 2.5 0 0 1 21 23V5.5Z" fill="currentColor" stroke="none" />,
+  solidBulb: <path d="M12 2.5a7 7 0 0 0-4.1 12.7c.6.5 1 1.2 1.1 2h6c.1-.8.5-1.5 1.1-2A7 7 0 0 0 12 2.5ZM9 19h6a3 3 0 0 1-6 0Z" fill="currentColor" stroke="none" />,
+  solidUsers: <path d="M9.5 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM2 19a6 6 0 0 1 12 0v1H2v-1ZM17 7a3.5 3.5 0 1 0-1.2 6.8 7 7 0 0 1 5.7 6.2H23v-1a5 5 0 0 0-4.1-4.9 3.5 3.5 0 0 0-1.9-7.1Z" fill="currentColor" stroke="none" />,
+  solidPulse: (
+    <>
+      <path d="M20.8 8.6c0 5-8.8 11-8.8 11s-8.8-6-8.8-11A4.8 4.8 0 0 1 12 6.1a4.8 4.8 0 0 1 8.8 2.5Z" fill="currentColor" stroke="none" />
+      <path d="M5.5 12h3l1.4-2.3 2.3 4.5 1.7-2.7h4.6" fill="none" stroke="white" strokeWidth="1.6" />
+    </>
+  ),
+  solidMonitor: <path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6v2h4v2H6v-2h4v-2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" fill="currentColor" stroke="none" />,
+  solidGear: <path d="m10.2 2 3.6 0 .6 2.1c.5.2 1 .5 1.4.8l2.1-.6 1.8 3.1-1.5 1.6c.1.6.1 1.2 0 1.8l1.5 1.6-1.8 3.1-2.1-.6c-.4.3-.9.6-1.4.8l-.6 2.1h-3.6l-.6-2.1c-.5-.2-1-.5-1.4-.8l-2.1.6-1.8-3.1 1.5-1.6a7 7 0 0 1 0-1.8L4.3 7.4l1.8-3.1 2.1.6c.4-.3.9-.6 1.4-.8L10.2 2Zm1.8 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="currentColor" stroke="none" />,
+  solidArchive: <path d="M3 3h18v5H3V3Zm1 7h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-9Zm5 3v2h6v-2H9Z" fill="currentColor" stroke="none" />,
   check: (
     <>
       <path d="M12 3 4 6v6c0 4.5 3.4 7.7 8 9 4.6-1.3 8-4.5 8-9V6l-8-3Z" />
@@ -33,6 +47,25 @@ const PATHS = {
     </>
   ),
   layers: <path d="m12 3 9 5-9 5-9-5 9-5ZM3 13l9 5 9-5" />,
+  database: (
+    <>
+      <ellipse cx="12" cy="5" rx="8" ry="3" />
+      <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+    </>
+  ),
+  book: (
+    <>
+      <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v17H5.5A2.5 2.5 0 0 0 3 22.5zM21 5.5A2.5 2.5 0 0 0 18.5 3H13v17h5.5a2.5 2.5 0 0 1 2.5 2.5z" />
+      <path d="M11 5H6M13 5h5" />
+    </>
+  ),
+  building: (
+    <>
+      <path d="M3 21h18M5 21v-9l7-4 7 4v9M9 21v-6h6v6M12 3v5M10 5h4" />
+    </>
+  ),
+  heartPulse: <path d="M20.8 8.8c0 5-8.8 11-8.8 11s-8.8-6-8.8-11A4.8 4.8 0 0 1 12 6.3a4.8 4.8 0 0 1 8.8 2.5ZM4 12h4l2-3 3.5 6 2-3H20" />,
+  folder: <path d="M3 6.5A2.5 2.5 0 0 1 5.5 4H10l2 2h6.5A2.5 2.5 0 0 1 21 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5zM3 9h18" />,
   eye: (
     <>
       <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />

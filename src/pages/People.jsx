@@ -1,7 +1,8 @@
 import { useRef } from 'react';
+import Button from '../components/Button';
 import Media from '../components/Media';
-import { Collaborations, Eyebrow, FeatureGrid, PartnerCta, Principles } from '../components/sections';
-import { expertise } from '../content/site';
+import { Eyebrow, FeatureGrid } from '../components/sections';
+import { companyValues, expertise } from '../content/site';
 import { usePageMotion } from '../motion/usePageMotion';
 
 // Placeholder profiles, exactly as in the design, until the leadership team's details are supplied.
@@ -11,9 +12,6 @@ const leaders = [1, 2, 3, 4].map((id) => ({
   name: 'Name Name',
   bio: 'sentence profile highlighting professional expertise, experience and contribution to Carter Biggs.',
 }));
-
-// The design repeats the expertise list under "What we value"; swap in the real values here.
-const values = expertise;
 
 export default function People() {
   const root = useRef(null);
@@ -44,7 +42,7 @@ export default function People() {
         </div>
       </section>
 
-      <section className="section" data-theme="light">
+      <section className="section people__expertise" data-theme="light">
         <div className="container">
           <div className="section__head">
             <Eyebrow>Expertise with purpose</Eyebrow>
@@ -94,7 +92,7 @@ export default function People() {
         </div>
       </section>
 
-      <section className="section" data-theme="light">
+      <section className="section people__values" data-theme="light">
         <div className="container">
           <div className="section__head">
             <Eyebrow>What we value</Eyebrow>
@@ -105,13 +103,31 @@ export default function People() {
               Our values shape how we make decisions, work with partners and serve our clients.
             </p>
           </div>
-          <FeatureGrid items={values} />
+          <FeatureGrid items={companyValues} showIcons={false} className="people__values-grid" />
         </div>
       </section>
 
-      <Collaborations />
-      <Principles />
-      <PartnerCta />
+      <section className="section people__careers" data-theme="light">
+        <div className="container cta">
+          <Media slot="people.opportunities" className="cta__media" />
+          <div className="cta__body">
+            <Eyebrow>Expertise with purpose</Eyebrow>
+            <h2 className="h2" data-split="words">
+              Bring your expertise to work that matters.
+            </h2>
+            <p className="lead lead--muted" data-split="lines">
+              We are always interested in people who are curious, capable and committed to solving meaningful problems.
+              Whether you're an experienced professional, a technical specialist or an emerging talent, there may be a
+              place for you at Carter Biggs
+            </p>
+            <div data-anim="fade">
+              <Button to="/open-roles" variant="coral">
+                Explore opportunities
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

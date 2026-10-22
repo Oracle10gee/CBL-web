@@ -101,10 +101,10 @@ export default function Partnerships() {
       </section>
 
       <section className="strip" data-theme="light">
-        <Marquee />
+        <Marquee className="partnerships__marquee" />
       </section>
 
-      <section className="section" data-theme="light">
+      <section className="section partnerships__collaboration" data-theme="light">
         <div className="container">
           <div className="section__head section__head--center">
             <Eyebrow>Built on collaboration</Eyebrow>
@@ -124,7 +124,7 @@ export default function Partnerships() {
         </div>
       </section>
 
-      <section className="section" data-theme="sky">
+      <section className="section partnerships__audiences" data-theme="sky">
         <div className="container">
           <div className="section__head">
             <Eyebrow className="eyebrow--on-color">Who we work with</Eyebrow>
@@ -149,7 +149,7 @@ export default function Partnerships() {
       </section>
 
       <Collaborations />
-      <Principles />
+      <Principles className="partnerships__principles" />
       <PartnerCta />
     </div>
   );

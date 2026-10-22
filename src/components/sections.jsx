@@ -13,12 +13,12 @@ export function Eyebrow({ children, className = '' }) {
   );
 }
 
-export function FeatureGrid({ items }) {
+export function FeatureGrid({ items, showIcons = true, className = '' }) {
   return (
-    <ul className="features" data-anim="stagger">
+    <ul className={`features ${className}`.trim()} data-anim="stagger">
       {items.map((item) => (
         <li className="feature" key={item.title}>
-          <Icon name={item.icon} className="feature__icon" />
+          {showIcons && <Icon name={item.icon} className="feature__icon" />}
           <h3 className="feature__title">{item.title}</h3>
           <p className="feature__text">{item.text}</p>
         </li>
@@ -49,9 +49,9 @@ export function Collaborations() {
   );
 }
 
-export function Principles() {
+export function Principles({ className = '' }) {
   return (
-    <section className="section" data-theme="light">
+    <section className={`section ${className}`.trim()} data-theme="light">
       <div className="container">
         <div className="section__head">
           <Eyebrow>Our partnership principles</Eyebrow>

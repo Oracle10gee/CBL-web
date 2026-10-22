@@ -16,11 +16,11 @@ const headlineStats = [
 
 const reachStats = [
   { icon: 'pin', value: 3, suffix: ' States', label: 'connected through BESDA AF TESS' },
-  { icon: 'layers', value: 60000, suffix: '+', label: 'Digital assets monitored through Track & Trace' },
-  { icon: 'award', value: 1, prefix: '#', label: 'National Education Asset Tracking Platform' },
-  { icon: 'tree', value: 7, suffix: '+', label: 'Levels of education governance connected through EduTrace' },
-  { icon: 'cart', value: 1, label: 'National e-Purchase Platform for Healthcare Commodities' },
-  { icon: 'network', value: 1, label: 'Digital ecosystem connecting healthcare supply chain stakeholders' },
+  { icon: 'database', value: 60000, suffix: '+', label: 'Digital assets monitored through Track & Trace' },
+  { icon: 'book', value: 1, prefix: '#', label: 'National Education Asset Tracking Platform' },
+  { icon: 'building', value: 7, suffix: '+', label: 'Levels of education governance connected through EduTrace' },
+  { icon: 'heartPulse', value: 1, label: 'National e-Purchase Platform for Healthcare Commodities' },
+  { icon: 'folder', value: 1, label: 'Digital ecosystem connecting healthcare supply chain stakeholders' },
 ];
 
 const quality = [
@@ -37,13 +37,13 @@ const solutions = [
     title: 'Healthcare Logistics',
     lead: 'Lagos first correspondent for the covid-19 pandemic',
     text: 'Medical supply chains, healthcare infrastructure.',
-    cta: { label: 'Explore Logistics Solutions', to: '/solutions/medical-logistics' },
+    cta: { label: 'Explore Logistics Solutions', to: '/solutions#medical-logistics' },
   },
   {
     slot: 'home.solution.education',
     title: 'Education',
     text: 'EduTrace (Federal Ministry of Education): Digital solutions and technology-enabled programmes.',
-    cta: { label: 'Explore Technology solutions', to: '/solutions/technology' },
+    cta: { label: 'Explore Technology solutions', to: '/solutions#technology-solutions' },
   },
   {
     slot: 'home.solution.infrastructure',
@@ -70,7 +70,7 @@ export default function Home() {
   usePageMotion(root);
 
   return (
-    <div className="home" ref={root}>
+    <div className="home page--condensed" ref={root}>
       <section className="hero hero--full" data-theme="dark">
         <div className="hero__bg" data-anim="hero-bg">
           <Media slot="home.hero" reveal={false} className="media--flat" />
@@ -109,10 +109,10 @@ export default function Home() {
               failure.
             </p>
             <p className="copy" data-anim="fade">
-              The Company realized that the medical supply chain is its own unique structure that holds different
-              requirements, standards, and demands. In addition, our professionals are trained to tailor work approaches
-              to the unique needs of our client, enabling us to offer to our clients, tailor-made solutions and services
-              that suit their logistic requirements.
+              The Company realized that the medical supply chain has its own unique structure, with different
+              requirements, standards, and demands. In addition, our professionals are trained to tailor their work
+              approaches to the unique needs of our clients, enabling us to offer tailor-made solutions and services
+              that suit their logistical requirements.
             </p>
           </div>
         </div>
@@ -123,7 +123,8 @@ export default function Home() {
           <div className="section__head">
             <Eyebrow className="eyebrow--on-color">Insights</Eyebrow>
             <h2 className="h2" data-split="words">
-              Providing services &amp; giving to the NNEWI
+              <span className="insights__line">Providing services &amp; giving</span>
+              <span className="insights__line">to the NNEWI</span>
             </h2>
           </div>
 
@@ -164,7 +165,7 @@ export default function Home() {
               </h2>
               <p className="copy" data-split="lines">
                 They need a partner who can see the whole system and make the moving parts work together. We combine
-                technical capability with on-the-ground execution, so we’re not just designing solutions — we’re
+                technical capability with on-the-ground execution, so we’re not just designing solutions, we’re
                 helping organisations implement them, manage them, and make them work.
               </p>
               <p className="copy" data-anim="fade">
