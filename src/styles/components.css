@@ -412,12 +412,19 @@
 }
 
 .media__cover {
-  background: var(--slab);
+  background: var(--media-reveal-color, var(--sky));
 }
 
-[data-theme='dark'] .media__cover,
+[data-theme='light'] .media__cover {
+  --media-reveal-color: var(--sky);
+}
+
 [data-theme='sky'] .media__cover {
-  background: rgba(255, 255, 255, 0.22);
+  --media-reveal-color: var(--navy);
+}
+
+[data-theme='dark'] .media__cover {
+  --media-reveal-color: var(--coral);
 }
 
 .media__img {
