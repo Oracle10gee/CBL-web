@@ -643,6 +643,30 @@
   margin-top: 8px;
 }
 
+.home #solutions .showcase__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.625rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.home #solutions .showcase__lead,
+.home #solutions .showcase__copy {
+  max-width: 44ch;
+  color: var(--muted);
+  font-family: 'Red Hat Text', var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.56;
+  letter-spacing: 0;
+}
+
+.home #solutions .showcase__text .btn {
+  border-radius: 999px;
+}
+
 .showcase__paginator {
   position: absolute;
   top: 50%;
@@ -860,7 +884,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(11, 12, 14, 0) 30%, rgba(11, 12, 14, 0.75));
+  background: rgba(11, 12, 14, 0.68);
 }
 
 .footer__body {
@@ -873,7 +897,7 @@
   display: grid;
   gap: 32px;
   padding: clamp(24px, 4vw, 48px);
-  border-radius: var(--radius-lg);
+  border-radius: 12px;
   background: var(--paper);
   color: var(--ink);
   font-size: 0.9rem;

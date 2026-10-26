@@ -8,10 +8,10 @@ import { usePageMotion } from '../motion/usePageMotion';
 // The design supplies copy for the first card only; the other three reuse the
 // "How we work" steps from the About page until dedicated copy is written.
 const approach = [
-  { slot: 'about.work.understand', title: 'Understand the need.', text: 'We align around the challenge and the outcome that matters.' },
-  { slot: 'about.work.design', title: 'Design.', text: 'We develop the right solution, system or approach.' },
-  { slot: 'about.work.execute', title: 'Execute.', text: 'We coordinate the people, technology and resources required.' },
-  { slot: 'about.work.deliver', title: 'Deliver.', text: 'We measure outcomes and ensure the solution works in practice.' },
+  { slot: 'partners.work.understand', title: 'Understand the need.', text: 'We align around the challenge and the outcome that matters.' },
+  { slot: 'partners.work.design', title: 'Design.', text: 'We develop the right solution, system or approach.' },
+  { slot: 'partners.work.execute', title: 'Execute.', text: 'We coordinate the people, technology and resources required.' },
+  { slot: 'partners.work.deliver', title: 'Deliver.', text: 'We measure outcomes and ensure the solution works in practice.' },
 ];
 
 const audiences = [

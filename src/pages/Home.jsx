@@ -35,22 +35,23 @@ const solutions = [
   {
     slot: 'home.solution.logistics',
     title: 'Healthcare Logistics',
-    lead: 'Lagos first correspondent for the covid-19 pandemic',
+    lead: 'Lagos first correspondent for the COVID-19 pandemic',
     text: 'Medical supply chains, healthcare infrastructure.',
     cta: { label: 'Explore Logistics Solutions', to: '/solutions#medical-logistics' },
   },
   {
     slot: 'home.solution.education',
     title: 'Education',
-    text: 'EduTrace (Federal Ministry of Education): Digital solutions and technology-enabled programmes.',
-    cta: { label: 'Explore Technology solutions', to: '/solutions#technology-solutions' },
+    lead: 'EduTrace (Federal Ministry of Education)',
+    text: 'Digital solutions and technology-enabled programmes.',
+    cta: { label: 'Explore Technology Solutions', to: '/solutions#technology-solutions' },
   },
   {
     slot: 'home.solution.infrastructure',
     title: 'Healthcare Infrastructure',
     lead: 'Medipool — Nigeria’s first medical Group Purchasing Organization',
     text: 'Medical supply chains, healthcare infrastructure.',
-    cta: { label: 'Explore Healthcare Solutions', to: '/case-studies' },
+    cta: { label: 'Explore Healthcare Solutions', to: '/solutions#medical-logistics' },
   },
 ];
 

@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import Icon from '../components/Icon';
 import Media from '../components/Media';
 import Showcase from '../components/Showcase';
 import { Eyebrow } from '../components/sections';
@@ -29,10 +30,10 @@ const outcomesRight = [
 ];
 
 const steps = [
-  { slot: 'about.work.understand', title: 'Understand', text: 'We identify the challenge, context and desired outcome.' },
-  { slot: 'about.work.design', title: 'Design', text: 'We develop the right solution, system or approach.' },
-  { slot: 'about.work.execute', title: 'Execute', text: 'We coordinate the people, technology and resources required.' },
-  { slot: 'about.work.deliver', title: 'Deliver', text: 'We measure outcomes and ensure the solution works in practice.' },
+  { icon: 'brain', title: 'Understand', text: 'We identify the challenge, context and desired outcome.' },
+  { icon: 'design', title: 'Design', text: 'We develop the right solution, system or approach.' },
+  { icon: 'network', title: 'Execute', text: 'We coordinate the people, technology and resources required.' },
+  { icon: 'rocket', title: 'Deliver', text: 'We measure outcomes and ensure the solution works in practice.' },
 ];
 
 export default function About() {
@@ -98,7 +99,7 @@ export default function About() {
       </section>
 
       <section className="section" data-theme="sky">
-        <div className="container">
+        <div className="container work-process">
           <div className="section__head">
             <Eyebrow className="eyebrow--on-color">How we work</Eyebrow>
             <h2 className="h2" data-split="words">
@@ -106,15 +107,12 @@ export default function About() {
             </h2>
           </div>
 
-          <ol className="tiles tiles--4">
-            {steps.map((step, index) => (
-              <li key={step.title}>
-                <Media slot={step.slot} className="tile" delay={index * 0.35}>
-                  <div className="tile__body">
-                    <span className="tile__title">{step.title}</span>
-                    <span className="tile__label">{step.text}</span>
-                  </div>
-                </Media>
+          <ol className="work-process__steps">
+            {steps.map((step) => (
+              <li className="work-process__step" key={step.title}>
+                <Icon name={step.icon} size={28} className="work-process__icon" />
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
               </li>
             ))}
           </ol>
@@ -123,7 +121,7 @@ export default function About() {
             <p data-split="lines">The problems our clients bring to us rarely fit neatly into one department.</p>
             <p data-split="lines">
               A healthcare logistics challenge may involve technology. A technology implementation may require project
-              management. A large scale programme may require logistics, stakeholder coordination and operational
+              management. A large-scale programme may require logistics, stakeholder coordination and operational
               support.
             </p>
             <p data-split="lines">That’s why collaboration is central to how we work.</p>

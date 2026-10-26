@@ -33,27 +33,27 @@ const capabilities = {
 
 const work = [
   {
-    slot: 'home.stat.specimen',
+    slot: 'solutions.project.besda',
     title: 'BESDA AF-TESS Track & Trace & Digital Asset Management System',
     text: 'A system designed to monitor and manage 60,000+ educational tablets across Oyo, Adamawa and Katsina States.',
   },
   {
-    slot: 'home.stat.carepacks',
+    slot: 'solutions.project.edutrace',
     title: 'EduTrace',
     text: 'A national education asset tracking and monitoring platform developed for the Federal Ministry of Education.',
   },
   {
-    slot: 'home.stat.oxygen',
+    slot: 'solutions.project.medipool',
     title: 'Medipool e-Purchase Platform',
     text: 'A national digital purchasing and supply-chain platform designed to improve the acquisition and management of essential medicines and healthcare commodities.',
   },
 ];
 
 const proof = [
-  { slot: 'home.stat.specimen', value: '60,000+', label: 'Educational tablets tracked and managed' },
-  { slot: 'home.stat.carepacks', value: '154,169', label: 'Specimens collected' },
-  { slot: 'home.stat.oxygen', value: '45,150', label: 'Oxygen supplied' },
-  { slot: 'home.stat.people', value: '15,600', label: 'COVID-19 care packs delivered' },
+  { slot: 'solutions.proof.tablets', value: '60,000+', label: 'Educational tablets tracked and managed' },
+  { slot: 'solutions.proof.specimens', value: '154,169', label: 'Specimens collected' },
+  { slot: 'solutions.proof.oxygen', value: '45,150', label: 'Oxygen supplied' },
+  { slot: 'solutions.proof.carepacks', value: '15,600', label: 'COVID-19 care packs delivered' },
 ];
 
 function CapabilityGrid({ items }) {
@@ -172,7 +172,7 @@ export default function Solutions() {
           <h3 className="solutions__what" id="project-capabilities">What we do</h3>
           <CapabilityGrid items={capabilities.project} />
           <h3 className="solutions__built">What we’ve built</h3>
-          <WorkCards items={[work[2], work[0]]} />
+          <WorkCards items={[work[2], { ...work[0], slot: 'project-management.besda' }]} />
         </div>
       </section>
 
