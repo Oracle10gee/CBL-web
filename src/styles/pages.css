@@ -189,7 +189,7 @@
 .partnerships .hero__content > .lead {
   max-width: 551px;
   color: rgba(255, 255, 255, 0.78);
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: var(--font-display);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -283,7 +283,7 @@
 
 .work-process__step p {
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'Red Hat Text', var(--font-body);
+  font-family: var(--font-display);
   font-size: 1.125rem;
   line-height: 1.5;
 }
@@ -445,7 +445,7 @@
 
   .home .why .bullets {
     position: relative;
-    top: clamp(55px, 5.3vw, 145px);
+    top: calc(clamp(55px, 5.3vw, 145px) + 31px);
   }
 }
 
@@ -565,7 +565,7 @@
 .banner__text {
   max-width: min(100%, 714px);
   color: var(--paper);
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: var(--font-display);
   font-size: 22px;
   font-weight: 400;
   line-height: 1.5;
@@ -617,7 +617,7 @@
   margin-top: clamp(40px, 6vw, 72px);
   max-width: none;
   color: var(--paper);
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: var(--font-display);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;

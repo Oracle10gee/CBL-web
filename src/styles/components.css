@@ -656,7 +656,7 @@
 .home #solutions .showcase__copy {
   max-width: 44ch;
   color: var(--muted);
-  font-family: 'Red Hat Text', var(--font-body);
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.56;
