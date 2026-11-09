@@ -37,7 +37,6 @@ export const pendingPages = [
 export const contact = {
   address: 'No 3 Mike Akhigbe Way, Jabi, FCT, Abuja.',
   phones: [
-    { label: '+234 (1) 252 0903', href: 'tel:+23412520903', showInFooter: false },
     { label: '09160001351', href: 'tel:+2349160001351' },
   ],
   email: 'info@carterbiggs.com.ng',

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Button from '../components/Button';
+import ContactForm from '../components/ContactForm';
 import SocialLinks from '../components/SocialLinks';
-import { Eyebrow } from '../components/sections';
 import { contact } from '../content/site';
 import { usePageMotion } from '../motion/usePageMotion';
 
@@ -11,12 +11,15 @@ export default function Contact() {
 
   return (
     <div className="contact" ref={root}>
-      <section className="hero hero--compact" data-theme="dark">
-        <div className="container hero__content">
-          <Eyebrow>Get in touch</Eyebrow>
-          <h1 className="h1 h1--sm" data-split="words">
-            Let’s make complex systems work.
-          </h1>
+      <section className="contact__form-section" data-theme="dark">
+        <div className="container">
+          <div className="contact__form-content">
+            <header className="contact__form-heading">
+              <h1>Let’s make complex systems work.</h1>
+              <p>Fill in the form below</p>
+            </header>
+            <ContactForm />
+          </div>
         </div>
       </section>
 

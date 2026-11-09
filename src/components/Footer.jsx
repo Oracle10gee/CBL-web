@@ -73,8 +73,17 @@ export default function Footer() {
             <h3 className="footer__label">Get in touch</h3>
             <p>{contact.address}</p>
             <p>
+              {contact.phones.filter((phone) => phone.showInFooter !== false).map((phone) => (
+                <a key={phone.href} href={phone.href}>{phone.label}</a>
+              ))}
+            </p>
+            <p>
               <a href={`mailto:${contact.email}`}>{contact.email}</a>
             </p>
+          </div>
+
+          <div className="footer__social">
+            <h3 className="footer__label">Socials</h3>
             <SocialLinks className="footer__socials" networks={['Instagram', 'LinkedIn']} />
           </div>
 
