@@ -5,6 +5,7 @@ import { usePageMotion } from '../motion/usePageMotion';
 import { subscribe } from '../services/subscribers';
 import Logo from './Logo';
 import Media from './Media';
+import SocialLinks from './SocialLinks';
 
 function SubscribeForm() {
   const [email, setEmail] = useState('');
@@ -72,16 +73,9 @@ export default function Footer() {
             <h3 className="footer__label">Get in touch</h3>
             <p>{contact.address}</p>
             <p>
-              {contact.phones.map((phone, index) => (
-                <span key={phone.href}>
-                  {index > 0 && ', '}
-                  <a href={phone.href}>{phone.label}</a>
-                </span>
-              ))}
-            </p>
-            <p>
               <a href={`mailto:${contact.email}`}>{contact.email}</a>
             </p>
+            <SocialLinks className="footer__socials" networks={['Instagram', 'LinkedIn']} />
           </div>
 
           <div className="footer__news">

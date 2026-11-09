@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import Button from '../components/Button';
+import SocialLinks from '../components/SocialLinks';
 import { Eyebrow } from '../components/sections';
 import { contact } from '../content/site';
 import { usePageMotion } from '../motion/usePageMotion';
@@ -41,6 +42,10 @@ export default function Contact() {
               </p>
             </li>
           </ul>
+          <div className="contact__social" data-anim="fade">
+            <h2 className="contact__label">Follow us</h2>
+            <SocialLinks />
+          </div>
           <div data-anim="fade">
             <Button href={`mailto:${contact.email}`} variant="coral" arrow>
               Email us

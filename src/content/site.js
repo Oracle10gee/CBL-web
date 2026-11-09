@@ -37,7 +37,7 @@ export const pendingPages = [
 export const contact = {
   address: 'No 3 Mike Akhigbe Way, Jabi, FCT, Abuja.',
   phones: [
-    { label: '+234 (1) 252 0903', href: 'tel:+23412520903' },
+    { label: '+234 (1) 252 0903', href: 'tel:+23412520903', showInFooter: false },
     { label: '09160001351', href: 'tel:+2349160001351' },
   ],
   email: 'info@carterbiggs.com.ng',
@@ -47,6 +47,12 @@ export const footerLinks = [
   { label: 'Privacy Policy', to: '/privacy-policy' },
   { label: 'Impact Report', to: '/impact-report' },
   { label: 'Newsroom', to: '/newsroom' },
+];
+
+export const socialLinks = [
+  { label: 'Instagram', href: 'https://www.instagram.com/carterbiggsng/' },
+  { label: 'LinkedIn', href: 'https://ng.linkedin.com/company/carter-biggs' },
+  { label: 'Facebook', href: 'https://www.facebook.com/people/Carterbiggslogistics_ng/100083137458435/#' },
 ];
 
 export const expertise = [

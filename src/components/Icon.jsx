@@ -1,4 +1,19 @@
 const PATHS = {
+  instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+    </>
+  ),
+  linkedin: (
+    <>
+      <circle cx="5" cy="5" r="2" fill="currentColor" stroke="none" />
+      <path d="M3.5 9h3v12h-3z" fill="currentColor" stroke="none" />
+      <path d="M10 9h3v1.8a4.1 4.1 0 0 1 3.6-2c3.1 0 4 2 4 5.2V21h-3.2v-6.2c0-1.7-.4-2.9-2-2.9s-2.2 1.2-2.2 3V21H10z" fill="currentColor" stroke="none" />
+    </>
+  ),
+  facebook: <path d="M13.5 21v-8h2.8l.4-3h-3.2V8c0-.9.3-1.5 1.6-1.5h1.7V3.8c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.6V10H7v3h2.6v8z" fill="currentColor" stroke="none" />,
   arrow: <path d="M7 17 17 7M9 7h8v8" />,
   chevron: <path d="m6 9 6 6 6-6" />,
   pulse: <path d="M3 12h4l2-5 4 10 2-5h6" />,

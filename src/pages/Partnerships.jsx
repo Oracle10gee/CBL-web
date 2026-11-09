@@ -37,7 +37,7 @@ const audiences = [
   },
   {
     slot: 'partners.who.suppliers',
-    title: 'Manufacturers & Suppliers',
+    title: '3PLs & 4 PLs',
     text: 'We connect with manufacturers and suppliers to support the efficient sourcing, movement and delivery of products and resources.',
   },
   {

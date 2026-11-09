@@ -26,6 +26,10 @@ import partnerReddington from '../assets/images/partner-reddington.png';
 import partnerMotherChild from '../assets/images/partner-mother-child.png';
 import partnerTotalMedical from '../assets/images/partner-total-medical.png';
 import partnerArriveAlive from '../assets/images/partner-arrive-alive.png';
+import partnerMedipool from '../assets/images/partner-medipool.png';
+import partnerFederalMinistryHealth from '../assets/images/partner-federal-ministry-health.png';
+import partnerFederalMinistryEducation from '../assets/images/partner-federal-ministry-education.png';
+import partnerRxHealth from '../assets/images/partner-rx-health.png';
 import partnershipUnderstand from '../assets/images/partnership-understand.png';
 import partnershipDesign from '../assets/images/partnership-design.png';
 import partnershipExecute from '../assets/images/partnership-execute.png';
@@ -61,6 +65,10 @@ export const partnerLogos = [
   { name: 'Mother & Child Hospitals', src: partnerMotherChild, className: 'partner-logo--mother-child' },
   { name: 'R-Jolad Hospital', src: partnerRjolad, className: 'partner-logo--rjolad' },
   { name: 'Reddington Hospital', src: partnerReddington, className: 'partner-logo--reddington' },
+  { name: 'Medipool', src: partnerMedipool, className: 'partner-logo--medipool' },
+  { name: 'Federal Ministry of Health and Social Welfare', src: partnerFederalMinistryHealth, className: 'partner-logo--ministry-health' },
+  { name: 'Federal Ministry of Education', src: partnerFederalMinistryEducation, className: 'partner-logo--ministry-education' },
+  { name: 'Rx Health Info Systems', src: partnerRxHealth, className: 'partner-logo--rx-health' },
 ];
 
 export const images = {

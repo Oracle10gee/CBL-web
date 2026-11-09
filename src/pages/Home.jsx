@@ -15,10 +15,8 @@ const headlineStats = [
 ];
 
 const reachStats = [
-  { icon: 'pin', value: 3, suffix: ' States', label: 'connected through BESDA AF TESS' },
+  { icon: 'pin', value: 3, suffix: ' States', label: 'connected through BESDA AF-TESS' },
   { icon: 'database', value: 60000, suffix: '+', label: 'Digital assets monitored through Track & Trace' },
-  { icon: 'book', value: 1, prefix: '#', label: 'National Education Asset Tracking Platform' },
-  { icon: 'building', value: 7, suffix: '+', label: 'Levels of education governance connected through EduTrace' },
   { icon: 'heartPulse', value: 1, label: 'National e-Purchase Platform for Healthcare Commodities' },
   { icon: 'folder', value: 1, label: 'Digital ecosystem connecting healthcare supply chain stakeholders' },
 ];
@@ -106,7 +104,7 @@ export default function Home() {
             </h2>
             <p className="copy" data-split="lines">
               Carter Biggs brings the expertise, technology and execution needed to connect the moving parts. Carter
-              Biggs Logistics Company is a trail blazer in an industry where there is a fine line between success and
+              Biggs is a trail blazer in an industry where there is a fine line between success and
               failure.
             </p>
             <p className="copy" data-anim="fade">
@@ -121,11 +119,11 @@ export default function Home() {
 
       <section className="section" data-theme="sky">
         <div className="container">
-          <div className="section__head">
+          <div className="section__head home__insights-head">
             <Eyebrow className="eyebrow--on-color">Insights</Eyebrow>
             <h2 className="h2" data-split="words">
-              <span className="insights__line">Providing services &amp; giving</span>
-              <span className="insights__line">to the NNEWI</span>
+              <span className="insights__line">Providing for the</span>
+              <span className="insights__line">community and stuff</span>
             </h2>
           </div>
 
@@ -155,15 +153,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" data-theme="light">
+      <section className="section home__why-section" data-theme="light">
         <div className="container">
           <Media slot="home.why" className="media--wide" />
           <div className="why">
-            <div>
+            <div className="why__intro">
               <Eyebrow>Why Carter Biggs</Eyebrow>
               <h2 className="h2" data-split="words">
                 Complex challenges need more than a single solution
               </h2>
+            </div>
+            <div className="why__copy">
               <p className="copy" data-split="lines">
                 They need a partner who can see the whole system and make the moving parts work together. We combine
                 technical capability with on-the-ground execution, so we’re not just designing solutions, we’re
@@ -185,7 +185,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--flush-bottom" id="solutions" data-theme="light">
+      <section className="section section--flush-bottom home__solutions-section" id="solutions" data-theme="light">
         <div className="container section__head section__head--center">
           <span className="rule" data-anim="line" />
           <h2 className="h2" data-split="words">
@@ -201,9 +201,6 @@ export default function Home() {
             <h2 className="h3" data-split="words">
               Our Partners
             </h2>
-            <p className="copy" data-split="lines">
-              Official Logistics Provider to the Lagos State COVID-19 Private Lab Consortium.
-            </p>
           </div>
           <Marquee className="partners__marquee" />
         </div>

@@ -21,7 +21,7 @@
   --radius-lg: 20px;
   --header-h: 68px;
   --gutter: clamp(20px, 4vw, 56px);
-  --section: clamp(72px, 10vw, 150px);
+  --section: clamp(48px, 6vw, 96px);
   --ease: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
@@ -145,7 +145,7 @@ button {
   display: grid;
   gap: 18px;
   max-width: 760px;
-  margin-bottom: clamp(40px, 6vw, 72px);
+  margin-bottom: clamp(28px, 3.5vw, 48px);
 }
 
 .section__head--center {
