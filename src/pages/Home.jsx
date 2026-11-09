@@ -72,7 +72,7 @@ export default function Home() {
     <div className="home page--condensed" ref={root}>
       <section className="hero hero--full" data-theme="dark">
         <div className="hero__bg" data-anim="hero-bg">
-          <Media slot="home.hero" reveal={false} className="media--flat" />
+          <Media slot="home.hero" reveal={false} className="media--flat" loading="eager" fetchPriority="high" />
         </div>
         <div className="hero__shade" />
         <div className="container hero__content hero__content--center">

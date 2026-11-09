@@ -1,19 +1,20 @@
-import { useCallback, useLayoutEffect, useState } from 'react';
+import { lazy, Suspense, useCallback, useLayoutEffect, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { pendingPages } from './content/site';
 import Loader from './motion/Loader';
 import SmoothScroll, { useLenis } from './motion/SmoothScroll';
-import About from './pages/About';
 import ComingSoon from './pages/ComingSoon';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
-import InsightDetail from './pages/InsightDetail';
-import Insights from './pages/Insights';
-import Partnerships from './pages/Partnerships';
-import People from './pages/People';
 import Solutions from './pages/Solutions';
+
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const InsightDetail = lazy(() => import('./pages/InsightDetail'));
+const Insights = lazy(() => import('./pages/Insights'));
+const Partnerships = lazy(() => import('./pages/Partnerships'));
+const People = lazy(() => import('./pages/People'));
 
 // Rendered before the routes so its layout effect runs ahead of each page's
 // motion setup, which measures positions from the top of the document.
@@ -51,23 +52,25 @@ function Shell() {
       <Header />
       <ScrollReset />
       <main className="page" key={pathname}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/partnerships" element={<Partnerships />} />
-          <Route path="/our-people" element={<People />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/solutions/medical-logistics" element={<Navigate to="/solutions#medical-logistics" replace />} />
-          <Route path="/solutions/technology" element={<Navigate to="/solutions#technology-solutions" replace />} />
-          <Route path="/solutions/project-management" element={<Navigate to="/solutions#project-management" replace />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/insights/:slug" element={<InsightDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          {pendingPages.map((page) => (
-            <Route key={page.path} path={page.path} element={<ComingSoon {...page} />} />
-          ))}
-          <Route path="*" element={<ComingSoon title="Page not found" eyebrow="404" missing />} />
-        </Routes>
+        <Suspense fallback={<div className="container page-loading" role="status">Loading page…</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/partnerships" element={<Partnerships />} />
+            <Route path="/our-people" element={<People />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/solutions/medical-logistics" element={<Navigate to="/solutions#medical-logistics" replace />} />
+            <Route path="/solutions/technology" element={<Navigate to="/solutions#technology-solutions" replace />} />
+            <Route path="/solutions/project-management" element={<Navigate to="/solutions#project-management" replace />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<InsightDetail />} />
+            <Route path="/contact" element={<Contact />} />
+            {pendingPages.map((page) => (
+              <Route key={page.path} path={page.path} element={<ComingSoon {...page} />} />
+            ))}
+            <Route path="*" element={<ComingSoon title="Page not found" eyebrow="404" missing />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
     </>

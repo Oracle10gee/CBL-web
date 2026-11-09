@@ -38,7 +38,7 @@ export default function People() {
               and operations — working together to turn complex challenges into solutions that work.
             </p>
           </div>
-          <Media slot="people.hero" className="hero__media" delay={0.4} />
+          <Media slot="people.hero" className="hero__media" delay={0.4} loading="eager" fetchPriority="high" />
         </div>
       </section>
 

@@ -37,7 +37,13 @@ export default function Insights() {
               we share what we're doing and why it matters. Explore the latest updates from across our organisation.
             </p>
           </div>
-          <Media slot="insights.hero" className="hero__media insights__hero-media" delay={0.4} />
+          <Media
+            slot="insights.hero"
+            className="hero__media insights__hero-media"
+            delay={0.4}
+            loading="eager"
+            fetchPriority="high"
+          />
         </div>
       </section>
 

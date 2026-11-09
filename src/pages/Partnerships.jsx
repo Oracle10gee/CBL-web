@@ -96,7 +96,7 @@ export default function Partnerships() {
               </Button>
             </div>
           </div>
-          <Media slot="partners.hero" className="hero__media" delay={0.4} />
+          <Media slot="partners.hero" className="hero__media" delay={0.4} loading="eager" fetchPriority="high" />
         </div>
       </section>
 

@@ -106,7 +106,13 @@ export default function Solutions() {
               <Button to="/contact" variant="coral">Work with us</Button>
             </div>
           </div>
-          <Media slot="solutions.hero" className="hero__media solutions__hero-media" delay={0.4} />
+          <Media
+            slot="solutions.hero"
+            className="hero__media solutions__hero-media"
+            delay={0.4}
+            loading="eager"
+            fetchPriority="high"
+          />
         </div>
       </section>
 

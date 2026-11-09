@@ -117,6 +117,13 @@ button {
   padding-inline: var(--gutter);
 }
 
+.page-loading {
+  min-height: 55vh;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
 .section {
   position: relative;
   padding-block: var(--section);

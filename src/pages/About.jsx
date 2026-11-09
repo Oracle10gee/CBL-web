@@ -49,7 +49,7 @@ export default function About() {
           </h1>
         </div>
         <div className="hero__banner" data-anim="scale">
-          <Media slot="about.hero" reveal={false} className="media--flat" />
+          <Media slot="about.hero" reveal={false} className="media--flat" loading="eager" fetchPriority="high" />
         </div>
       </section>
 

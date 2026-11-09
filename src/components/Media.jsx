@@ -12,7 +12,17 @@ function Placeholder({ label, tone = 'slab' }) {
 
 // A framed image slot. `slot` is a key in content/images.js; `src` overrides it
 // for images that come from data (e.g. CMS cover images).
-export default function Media({ slot, src, alt, className = '', reveal = true, delay, children }) {
+export default function Media({
+  slot,
+  src,
+  alt,
+  className = '',
+  reveal = true,
+  delay,
+  loading = 'lazy',
+  fetchPriority,
+  children,
+}) {
   const image = images[slot] || {};
   const source = src || image.src;
 
@@ -21,7 +31,14 @@ export default function Media({ slot, src, alt, className = '', reveal = true, d
       {reveal && <div className="media__cover" aria-hidden="true" />}
       <div className="media__item">
         {source ? (
-          <img className="media__img" src={source} alt={alt ?? image.alt ?? ''} loading="lazy" />
+          <img
+            className="media__img"
+            src={source}
+            alt={alt ?? image.alt ?? ''}
+            loading={loading}
+            fetchPriority={fetchPriority}
+            decoding="async"
+          />
         ) : (
           <Placeholder label={image.label || slot} tone={image.tone} />
         )}
