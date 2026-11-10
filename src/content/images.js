@@ -35,7 +35,7 @@ import partnershipDesign from '../assets/images/partnership-design.webp';
 import partnershipExecute from '../assets/images/partnership-execute.webp';
 import partnershipDeliver from '../assets/images/partnership-deliver.webp';
 import partnershipsHero from '../assets/images/partnerships-hero.webp';
-import partnershipGovernment from '../assets/images/partnership-government.webp';
+import partnershipGovernment from '../assets/images/partnership-government-handshake.webp';
 import partnershipHealthcare from '../assets/images/partnership-healthcare.webp';
 import partnershipDevelopment from '../assets/images/partnership-development.webp';
 import partnershipTechnology from '../assets/images/partnership-technology.webp';
@@ -193,7 +193,7 @@ export const images = {
   },
   'partners.who.government': {
     src: partnershipGovernment,
-    alt: 'Government building with a green dome and Nigerian flags',
+    alt: 'Business partners shaking hands',
   },
   'partners.who.healthcare': {
     src: partnershipHealthcare,
@@ -237,7 +237,7 @@ export const images = {
   },
   'collab.fme': {
     src: collaborationFme,
-    alt: 'Student reading in a library',
+    alt: 'Students studying together in a library with a mentor',
   },
   'collab.medipool': {
     src: collaborationMedipool,
