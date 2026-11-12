@@ -11,16 +11,7 @@ export const nav = [
       { label: 'Open Roles', to: '/open-roles' },
     ],
   },
-  {
-    label: 'Solutions',
-    to: '/solutions',
-    children: [
-      { label: 'Medical Logistics', to: '/solutions#medical-logistics' },
-      { label: 'Technology Solutions', to: '/solutions#technology-solutions' },
-      { label: 'Project Management', to: '/solutions#project-management' },
-      { label: 'Proven in Practice', to: '/solutions#proven-in-practice' },
-    ],
-  },
+  { label: 'Solutions', to: '/solutions' },
   { label: 'Case studies', to: '/case-studies' },
   { label: 'Insights', to: '/insights' },
 ];

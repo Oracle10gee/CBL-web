@@ -90,7 +90,7 @@ body {
   background: var(--ink);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -259,7 +259,7 @@ button {
 }
 
 .lead {
-  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  font-size: clamp(1.125rem, 1.25vw, 1.15rem);
   line-height: 1.6;
   text-wrap: pretty;
 }

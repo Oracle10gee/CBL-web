@@ -9,6 +9,10 @@ test('every navigation link points at a route the app serves', () => {
   links.forEach((link) => expect(served.has(link.to.split('#')[0])).toBe(true));
 });
 
+test('Solutions is a direct navigation link without a dropdown', () => {
+  expect(nav.find((item) => item.label === 'Solutions')).toEqual({ label: 'Solutions', to: '/solutions' });
+});
+
 test('every collaboration has an image slot in the manifest', () => {
   collaborations.forEach((item) => expect(images[item.slot]).toBeDefined());
 });

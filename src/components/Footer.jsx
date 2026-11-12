@@ -73,12 +73,12 @@ export default function Footer() {
             <h3 className="footer__label">Get in touch</h3>
             <p>{contact.address}</p>
             <p>
+              <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            </p>
+            <p>
               {contact.phones.filter((phone) => phone.showInFooter !== false).map((phone) => (
                 <a key={phone.href} href={phone.href}>{phone.label}</a>
               ))}
-            </p>
-            <p>
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
             </p>
           </div>
 

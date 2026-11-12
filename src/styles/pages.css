@@ -27,7 +27,7 @@
 .home .copy {
   color: #333333;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.56;
   letter-spacing: -0.25px;
@@ -92,6 +92,7 @@
 
 .home #solutions .section__head {
   max-width: none;
+  margin-top: var(--space-1);
   margin-bottom: var(--space-4);
 }
 
@@ -107,6 +108,15 @@
   line-height: 1.2;
   letter-spacing: 0;
   text-transform: uppercase;
+}
+
+.home #solutions .showcase__stage {
+  align-items: start;
+  padding-top: clamp(32px, 5vh, 56px);
+}
+
+.home #solutions .showcase__texts {
+  align-self: center;
 }
 
 .home #solutions .rule {
@@ -139,28 +149,33 @@
   min-height: 78svh;
 }
 
-.hero__bg,
-.hero__shade {
+.hero__bg {
   position: absolute;
   inset: 0;
 }
 
-.hero__shade {
-  background: linear-gradient(
-    to bottom,
-    rgba(11, 12, 14, 0.05) 0%,
-    rgba(11, 12, 14, 0.08) 38%,
-    rgba(11, 12, 14, 0.42) 72%,
-    rgba(11, 12, 14, 0.76) 100%
-  );
-}
-
-.hero__shade::before {
-  content: '';
+.hero__top-shade {
   position: absolute;
+  z-index: 1;
   inset: 0 0 auto;
   height: clamp(120px, 12.65vw, 182px);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+.hero__shade {
+  position: absolute;
+  z-index: 1;
+  inset: 40% 0 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 14, 0) 0%,
+    rgba(11, 12, 14, 0.2) 14%,
+    rgba(11, 12, 14, 0.5) 40%,
+    rgba(11, 12, 14, 0.76) 72%,
+    rgba(11, 12, 14, 0.93) 100%
+  );
 }
 
 /* Keep the placeholder's caption clear of the header and headline. */
@@ -182,10 +197,21 @@
   line-height: 1.2;
   letter-spacing: 0;
   text-transform: none;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero--full .hero__content {
+  z-index: 2;
 }
 
 .home .hero--full .hero__content--center > .lead {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+@media (min-width: 768px) {
+  .home .hero--full .hero__content {
+    transform: translateY(clamp(144px, 17vh, 168px));
+  }
 }
 
 /* Title over a wide banner (about) */
@@ -262,7 +288,7 @@
   max-width: 551px;
   color: rgba(255, 255, 255, 0.78);
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -443,7 +469,7 @@
 .reach__label {
   max-width: 26ch;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.3;
   letter-spacing: -0.25px;
 }
@@ -492,7 +518,7 @@
 .home .why .copy {
   color: #484848;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -721,7 +747,7 @@
 .partnerships__collaboration .section__head .lead {
   max-width: 522px;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -825,7 +851,7 @@
 .partnerships__audiences .eyebrow--on-color {
   color: #000c2f;
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.02em;
@@ -860,7 +886,7 @@
   max-width: 60ch;
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -908,7 +934,7 @@
   max-width: 38ch;
   color: #484848;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0;
@@ -934,7 +960,7 @@
   max-width: 660px;
   color: #484848;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -966,7 +992,7 @@
   max-width: 38ch;
   color: #484848;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -1006,7 +1032,7 @@
 }
 
 .people__values .section__head .eyebrow {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.3;
   letter-spacing: -0.02em;
 }
@@ -1101,7 +1127,7 @@
   max-width: 507px;
   color: #484848;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -1393,7 +1419,7 @@
   max-width: 551px;
   color: rgba(255, 255, 255, 0.78);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -1431,7 +1457,7 @@
   margin-bottom: 4px;
   color: #484848;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: 0;
@@ -1495,7 +1521,7 @@
   max-width: 38ch;
   color: #484848;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: 0;
@@ -1560,7 +1586,7 @@
 .solutions__work-card p {
   color: currentColor;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
   opacity: 0.88;
 }
@@ -1588,7 +1614,7 @@
 .solutions__proof-intro p {
   color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -1647,7 +1673,7 @@
 .solutions__proof-label {
   max-width: 24ch;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -1691,7 +1717,7 @@
   max-width: 507px;
   color: #484848;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -1756,7 +1782,7 @@
   max-width: 551px;
   color: rgba(255, 255, 255, 0.78);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
@@ -1816,7 +1842,7 @@
 .insights__cards .card__text {
   color: #484848;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
 }

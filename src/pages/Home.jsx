@@ -74,6 +74,7 @@ export default function Home() {
         <div className="hero__bg" data-anim="hero-bg">
           <Media slot="home.hero" reveal={false} className="media--flat" loading="eager" fetchPriority="high" />
         </div>
+        <div className="hero__top-shade" aria-hidden="true" />
         <div className="hero__shade" />
         <div className="container hero__content hero__content--center">
           <h1 className="h1" data-split="words">
