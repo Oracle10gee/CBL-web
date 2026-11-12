@@ -69,6 +69,10 @@
   padding-top: var(--space-3);
 }
 
+.home .home__partners-section {
+  padding-top: 0;
+}
+
 .home .home__insights-head {
   max-width: none;
   justify-items: start;
@@ -248,6 +252,9 @@
 }
 
 @media (min-width: 992px) {
+  .home .home__partners-section {
+    margin-top: -80px;
+  }
   .about {
     --section: var(--space-10);
   }

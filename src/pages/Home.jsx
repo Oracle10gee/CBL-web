@@ -196,7 +196,7 @@ export default function Home() {
         <Showcase items={solutions} />
       </section>
 
-      <section className="section section--tight" data-theme="light">
+      <section className="section section--tight home__partners-section" data-theme="light">
         <div className="container partners">
           <div className="partners__intro">
             <h2 className="h3" data-split="words">
