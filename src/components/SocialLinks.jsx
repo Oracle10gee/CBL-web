@@ -18,7 +18,7 @@ export default function SocialLinks({ className = '', networks }) {
             aria-label={social.label}
             title={social.label}
           >
-            <Icon name={social.label.toLowerCase()} size={20} />
+            <Icon name={social.label.toLowerCase()} size={24} />
           </a>
         </li>
       ))}

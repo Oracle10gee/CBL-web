@@ -1,9 +1,13 @@
 const PATHS = {
   instagram: (
     <>
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+      <path
+        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm5.5-2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
+        fill="currentColor"
+        fillRule="evenodd"
+        stroke="none"
+      />
+      <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
     </>
   ),
   linkedin: (
