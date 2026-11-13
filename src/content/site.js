@@ -19,7 +19,6 @@ export const nav = [
 // Routes that appear in the navigation but have no supplied design yet.
 export const pendingPages = [
   { path: '/open-roles', title: 'Open Roles', eyebrow: 'Company' },
-  { path: '/case-studies', title: 'Case studies', eyebrow: 'Our work' },
   { path: '/privacy-policy', title: 'Privacy Policy', eyebrow: 'Legal' },
   { path: '/impact-report', title: 'Impact Report', eyebrow: 'Company' },
   { path: '/newsroom', title: 'Newsroom', eyebrow: 'Company' },

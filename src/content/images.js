@@ -58,6 +58,11 @@ import solutionsProofSpecimens from '../assets/images/solutions-proof-specimens.
 import solutionsProofOxygen from '../assets/images/solutions-proof-oxygen.webp';
 import solutionsProofCarepacks from '../assets/images/solutions-proof-carepacks.webp';
 import solutionsCtaTeam from '../assets/images/solutions-cta-team.webp';
+import caseOxygenFacility from '../assets/images/case-oxygen-facility.webp';
+import caseOxygenPlant from '../assets/images/case-oxygen-plant.webp';
+import caseOxygenSurge from '../assets/images/case-oxygen-surge.webp';
+import caseOxygenHandover from '../assets/images/case-oxygen-handover.webp';
+import caseOxygenCta from '../assets/images/case-oxygen-cta.webp';
 
 export const partnerLogos = [
   { name: 'Total Medical Services', src: partnerTotalMedical, className: 'partner-logo--total' },
@@ -142,6 +147,26 @@ export const images = {
   'solutions.proof.carepacks': {
     src: solutionsProofCarepacks,
     alt: 'COVID-19 care pack with a mask, sanitizer and recovery guidance',
+  },
+  'case-study.oxygen.facility': {
+    src: caseOxygenFacility,
+    alt: 'Oxygen cylinder pressure gauge and supply equipment',
+  },
+  'case-study.oxygen.plant': {
+    src: caseOxygenPlant,
+    alt: 'Plant manager in safety equipment beside oxygen plant machinery',
+  },
+  'case-study.oxygen.surge': {
+    src: caseOxygenSurge,
+    alt: 'Healthcare worker treating a patient during the pandemic',
+  },
+  'case-study.oxygen.handover': {
+    src: caseOxygenHandover,
+    alt: 'Healthcare professionals meeting during the oxygen plant handover',
+  },
+  'case-study.oxygen.cta': {
+    src: caseOxygenCta,
+    alt: 'Colleagues reviewing a project together on a laptop',
   },
   'solutions.cta': {
     src: solutionsCtaTeam,

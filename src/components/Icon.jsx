@@ -21,6 +21,38 @@ const PATHS = {
   arrow: <path d="M7 17 17 7M9 7h8v8" />,
   chevron: <path d="m6 9 6 6 6-6" />,
   pulse: <path d="M3 12h4l2-5 4 10 2-5h6" />,
+  chart: (
+    <>
+      <path d="M4 20V4M4 20h17" />
+      <path d="m7 15 4-4 3 3 6-7M16 7h4v4" />
+    </>
+  ),
+  medicalBag: (
+    <>
+      <path d="M4 8h16v12H4zM9 8V5a3 3 0 0 1 6 0v3" />
+      <path d="M12 11v6M9 14h6" />
+    </>
+  ),
+  solidMedicalBag: (
+    <>
+      <path d="M4 8h16a2 2 0 0 1 2 2v10H2V10a2 2 0 0 1 2-2Zm4 0V6a4 4 0 0 1 8 0v2h-2V6a2 2 0 0 0-4 0v2H8Z" fill="currentColor" stroke="none" />
+      <path d="M12 11v6M9 14h6" stroke="var(--sky)" strokeWidth="2" />
+    </>
+  ),
+  solidBuilding: <path d="m12 3 10 5v2H2V8l10-5ZM4 12h4v7H4v-7Zm6 0h4v7h-4v-7Zm6 0h4v7h-4v-7ZM2 21h20v-2H2v2Z" fill="currentColor" stroke="none" />,
+  solidDatabase: (
+    <>
+      <ellipse cx="12" cy="5" rx="8" ry="3" fill="currentColor" stroke="none" />
+      <path d="M4 5v13c0 1.7 3.6 3 8 3s8-1.3 8-3V5" fill="currentColor" stroke="none" />
+      <path d="M4 11c0 1.7 3.6 3 8 3s8-1.3 8-3" stroke="var(--paper)" strokeWidth="1.5" />
+    </>
+  ),
+  solidCheckCircle: (
+    <>
+      <circle cx="12" cy="12" r="10" fill="currentColor" stroke="none" />
+      <path d="m8 12 2.5 2.5L16 9" stroke="var(--paper)" strokeWidth="2" />
+    </>
+  ),
   monitor: (
     <>
       <rect x="3" y="4" width="18" height="12" rx="2" />

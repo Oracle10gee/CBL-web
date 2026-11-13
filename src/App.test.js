@@ -1,7 +1,7 @@
 import { images } from './content/images';
 import { collaborations, nav, pendingPages } from './content/site';
 
-const designedRoutes = ['/about', '/partnerships', '/our-people', '/insights', '/solutions'];
+const designedRoutes = ['/about', '/partnerships', '/our-people', '/insights', '/solutions', '/case-studies'];
 
 test('every navigation link points at a route the app serves', () => {
   const served = new Set([...designedRoutes, ...pendingPages.map((page) => page.path)]);

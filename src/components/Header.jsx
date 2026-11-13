@@ -95,6 +95,7 @@ export default function Header() {
   const classes = [
     'header',
     `header--on-${menuOpen ? 'dark' : theme}`,
+    pathname.startsWith('/case-studies') && 'header--case-study',
     hidden && 'header--hidden',
     !atTop && !menuOpen && 'header--scrolled',
     menuOpen && 'header--menu-open',

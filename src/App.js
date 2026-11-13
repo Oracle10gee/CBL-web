@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Solutions from './pages/Solutions';
 
 const About = lazy(() => import('./pages/About'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const Contact = lazy(() => import('./pages/Contact'));
 const InsightDetail = lazy(() => import('./pages/InsightDetail'));
 const Insights = lazy(() => import('./pages/Insights'));
@@ -59,6 +60,7 @@ function Shell() {
             <Route path="/partnerships" element={<Partnerships />} />
             <Route path="/our-people" element={<People />} />
             <Route path="/solutions" element={<Solutions />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/solutions/medical-logistics" element={<Navigate to="/solutions#medical-logistics" replace />} />
             <Route path="/solutions/technology" element={<Navigate to="/solutions#technology-solutions" replace />} />
             <Route path="/solutions/project-management" element={<Navigate to="/solutions#project-management" replace />} />

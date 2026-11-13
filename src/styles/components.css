@@ -42,6 +42,16 @@
   color: var(--paper);
 }
 
+.header--case-study.header--on-dark {
+  color: var(--paper);
+}
+
+.header--case-study.header--on-dark .nav__link,
+.header--case-study.header--on-dark .nav__toggle,
+.header--case-study.header--on-dark .header__cta {
+  color: var(--paper);
+}
+
 .header--on-dark .logo__image:not(.logo__image--white),
 .header--on-sky .logo__image:not(.logo__image--white) {
   display: none;
